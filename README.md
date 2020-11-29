@@ -5,8 +5,8 @@
 ### Setup
 * Clone the repository
 ```git
-git clone this_repo.git
-cd name
+git https://github.com/WouterMartens/discord.js-typescript-template.git
+cd discord.js-typescript-template
 ```
 * Install the dependencies
 ```git
@@ -18,7 +18,7 @@ npm install
 ```git
 tsc
 ```
-* Run the bot
+* Run the bot (the change of directory is important!)
 ```git
 cd dist
 node index.js
