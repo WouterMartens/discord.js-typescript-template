@@ -19,15 +19,20 @@ client.once('ready', () => {
     console.log('Ready!');
 });
 
+// When the client receives a new message
 client.on('message', message => {
+    // Checks if the message has the prefix and isn't made by a bot
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
+    // Pulls the command and the arguments from the message
     const args: string[] = message.content.slice(prefix.length).trim().split('/ +/');
     const command: string|undefined = args.shift()?.toLocaleLowerCase();
 
+    // Checks if the command exists
     if (command && !client.commands.has(command)) return;
 
     try {
+        // Execute the command
         if (command) {
             client.commands.get(command).execute(message, args);
         }
