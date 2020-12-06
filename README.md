@@ -12,6 +12,11 @@ cd discord.js-typescript-template
 ```git
 npm install
 ```
+* Discard changes of the node modules
+```git
+git checkout -- node_modules/discord.js/src/client/Client.js
+git checkout -- node_modules/discord.js/typings/index.d.ts
+```
 * Create or find your application's token at https://discord.com/developers/applications
 * Rename `config.json.example` to `config.json` and add the token (note: you can also change the prefix here)
 * Compile the TypeScript files
