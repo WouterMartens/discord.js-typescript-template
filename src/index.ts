@@ -27,6 +27,7 @@ client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
     // Pulls the command and the arguments from the message
+<<<<<<< HEAD
     const args: string[] = message.content.slice(prefix.length).trim().split(/ +/);
     //@ts-ignore
     const commandName: string = args.shift()?.toLocaleLowerCase();
